@@ -21,7 +21,7 @@ const Input: FC<Props> = ({
   return (
     <div className="md:text-xl">
       <div
-        className={`flex items-center overflow-hidden rounded-2xl bg-grey-100 pr-6 duration-200 focus-within:ring-1 focus-within:ring-violet ${
+        className={`flex items-center overflow-hidden rounded-2xl bg-grey-100 pr-6 duration-200 focus-within:ring-1 focus-within:ring-violet dark:bg-grey-900 ${
           error ? "ring-1 ring-red" : ""
         }`}
       >
@@ -31,7 +31,7 @@ const Input: FC<Props> = ({
           placeholder={placeholder}
           onChange={onChange}
           onKeyUp={(e) => e.key === "Enter" && onSearch()}
-          className="w-full bg-transparent py-4 pl-6 font-bold text-grey-800 outline-none placeholder:text-grey-800/25 md:py-5"
+          className="w-full bg-transparent py-4 pl-6 font-bold text-grey-800 outline-none duration-200 placeholder:text-grey-800/25 dark:text-white dark:placeholder:text-white/20 md:py-5"
         />
         <GoSearch role="button" onClick={onSearch} className="text-violet" />
       </div>

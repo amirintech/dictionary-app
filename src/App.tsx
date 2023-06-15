@@ -1,15 +1,9 @@
-import Input from "./components/Input";
+import PlayButton from "./components/shared/PlayButton";
 
 const App = () => {
   return (
-    <div className="m-3">
-      <Input
-        value="hey"
-        placeholder="Hey"
-        onChange={() => console.log("onChange")}
-        onSearch={() => console.log("onSearch")}
-        // error={Error("Cannot be left empty!")}
-      />
+    <div className="app">
+      <PlayButton onClick={console.log} />
     </div>
   );
 };

@@ -7,3 +7,9 @@
 body {
   @apply font-sans;
 }
+.app {
+  @apply h-screen w-screen bg-white duration-200 dark:bg-black;
+}
+.play-btn {
+  @apply bg-violet/25;
+}
