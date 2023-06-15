@@ -1,9 +1,11 @@
-import PlayButton from "./components/shared/PlayButton";
+import Header from "./components/header/Header";
 
 const App = () => {
   return (
     <div className="app">
-      <PlayButton onClick={console.log} />
+      <div className="container">
+        <Header />
+      </div>
     </div>
   );
 };

@@ -8,8 +8,8 @@ body {
   @apply font-sans;
 }
 .app {
-  @apply h-screen w-screen bg-white duration-200 dark:bg-black;
+  @apply h-screen w-screen bg-white text-grey-800 duration-200 dark:bg-black dark:text-white;
 }
-.play-btn {
-  @apply bg-violet/25;
+.container {
+  @apply m-auto max-w-3xl p-6 md:px-14 md:py-10;
 }
