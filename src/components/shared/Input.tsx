@@ -1,12 +1,12 @@
-import { FC } from "react";
+import { ChangeEvent, FC } from "react";
 import { GoSearch } from "react-icons/go";
 
 interface Props {
   type?: string;
-  error?: Error;
-  value?: string;
+  error: Error | null;
+  value: string;
   placeholder?: string;
-  onChange: () => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onSearch: () => void;
 }
 

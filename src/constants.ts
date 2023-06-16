@@ -1,3 +1,4 @@
+// User preferences
 export type Mode = "dark" | "light";
 
 export interface Font {
