@@ -28,6 +28,7 @@ const AudioPlayer: FC<Props> = ({ source }) => {
       className="group flex h-12 w-12 items-center justify-center rounded-full bg-violet/25 duration-200 hover:bg-violet md:h-[75px] md:w-[75px]"
     >
       <audio ref={audioRef}>
+        {/* Source is removed for HTML validator to be happy */}
         {/* <source src={source} type="audio/mpeg" /> */}
       </audio>
 

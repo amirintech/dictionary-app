@@ -40,16 +40,17 @@ const App = () => {
         {/* Header */}
         <Header />
 
-        {/* Search Input */}
-        <div className="mt-6 md:mt-[52px]">
+        {/* Search */}
+        <section className="mt-6 md:mt-[52px]">
           <Input
             value={searchQuery}
             error={emptyInputError}
             onSearch={handleSearch}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-        </div>
+        </section>
 
+        {/* Main */}
         <main>
           {/* No definition error view */}
           {noDefinitionError && <WordNotFoundView />}
