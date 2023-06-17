@@ -8,7 +8,7 @@ const Seperator: FC<Props> = ({ text }) => {
   return (
     <div className="my-8 flex items-center gap-5 md:my-10 md:gap-7">
       {text && (
-        <span className="text-lg font-bold italic duration-200 md:text-2xl">
+        <span className="text-lg font-bold italic leading-none duration-200 md:text-2xl">
           {text}
         </span>
       )}
