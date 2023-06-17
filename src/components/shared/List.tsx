@@ -14,7 +14,7 @@ const List: FC<Props> = ({ definitions }) => {
         {definitions.map(({ definition, example }, idx) => (
           <li
             key={idx}
-            className="flex text-violet before:font-sans before:content-['•'] md:pl-5"
+            className="flex text-violet before:font-sans before:content-['•'] md:pl-5 md:text-lg"
           >
             <p className="flex flex-col gap-1 pl-3">
               {/* Definition */}
