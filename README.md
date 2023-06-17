@@ -1,8 +1,10 @@
 # Dictionary Web App
 
-Live website: [Live App](https://dictionary-app-roan.vercel.app/)
+## Live website:
 
-This is a repository for the [Dictionary Web App](https://amirintech.github.io/dictionary-app/), a project solution for the [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
+You can view the app [HERE](https://dictionary-app-roan.vercel.app/)
+
+This is a repository for a challange solution for the [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
 
 ![Screenshot of the app](./public/app-screenshot.png)
 
