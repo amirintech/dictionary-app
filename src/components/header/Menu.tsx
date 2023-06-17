@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import useTheme from "./theme/useTheme";
-import { Font, fonts } from "../../constants";
+import { Font, fonts } from "../../utils/constants";
 
 const Menu = () => {
   const { font, setFont } = useTheme();

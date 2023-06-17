@@ -1,7 +1,7 @@
 import { FC, ReactNode, createContext, useEffect, useState } from "react";
-import { Font, Mode, fonts } from "../../../constants";
+import { Font, Mode, fonts } from "../../../utils/constants";
 import { getPreferences, setPreferences } from "../../../utils/storage";
-import initialData from "../../../initial-data";
+import initialData from "../../../utils/initial-data";
 
 interface Theme {
   mode: Mode;

@@ -7,11 +7,14 @@ interface Props {
 
 const AudioPlayer: FC<Props> = ({ source }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const playSound = () => {
     if (audioRef.current) audioRef.current.play();
   };
 
+  // When the source of an audio or video element changes, many browsers
+  // won't immediately request the new media file. Instead, they wait until
+  // the load method is called on the media element.
+  // Hence, the useEffect hook
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.src = source;

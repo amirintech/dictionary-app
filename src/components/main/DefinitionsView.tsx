@@ -8,7 +8,7 @@ interface Props {
 }
 
 const DefinitionsView: FC<Props> = ({ synonyms, definitions }) => {
-  const formattedSynonyms = synonyms.join(", "); // TODO: Handle duplicate ones
+  const formattedSynonyms = synonyms.join(", ");
 
   return (
     <section>

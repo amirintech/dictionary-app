@@ -1,4 +1,4 @@
-import { Font, Mode, fonts } from "../constants";
+import { Font, Mode, fonts } from "./constants";
 
 export interface Preferences {
   font: Font;

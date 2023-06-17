@@ -4,8 +4,8 @@ import Input from "./components/shared/Input";
 import WordView from "./components/main/WordView";
 import Word from "./models/word";
 import getDefinition from "./utils/dictionary-api";
-import Footer from "./components/footer/Footer";
-import initialData from "./initial-data";
+import initialData from "./utils/initial-data";
+import WordNotFoundView from "./components/main/WordNotFoundView";
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,7 +22,7 @@ const App = () => {
 
   const handleSearch = () => {
     if (searchQuery.trim().length === 0) {
-      setEmptyInputError(Error("Whoops, can’t be empty…"));
+      setEmptyInputError(Error("Whoops, can't be empty…"));
       return;
     }
 
@@ -36,7 +36,6 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* TODO: Add spinner when fetching data */}
       <div className="container">
         {/* Header */}
         <Header />
@@ -52,25 +51,10 @@ const App = () => {
         </div>
 
         {/* No definition error view */}
-        {noDefinitionError && (
-          <div className="mt-32 text-center">
-            <span className="mb-11 inline-block text-6xl">😕</span>
-            <h2 className="mb-6 text-xl font-bold">No Definitions Found</h2>
-            <p className="text-lg text-grey-600">
-              Sorry pal, we couldn't find definitions for the word you were
-              looking for. You can try the search again at later time or head to
-              the web instead.
-            </p>
-          </div>
-        )}
+        {noDefinitionError && <WordNotFoundView />}
 
         {/* Word view */}
-        {!noDefinitionError && (
-          <>
-            <WordView word={word} />
-            <Footer source={word.sourceUrls[0]} />
-          </>
-        )}
+        {!noDefinitionError && <WordView word={word} />}
       </div>
     </div>
   );

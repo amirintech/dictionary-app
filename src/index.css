@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans;
+  @apply select-none font-sans;
 }
 .app {
   @apply min-h-screen w-screen bg-white p-6 text-grey-800 duration-200 dark:bg-black dark:text-white md:px-14 md:py-10;

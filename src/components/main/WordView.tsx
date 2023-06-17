@@ -3,13 +3,14 @@ import Word from "../../models/word";
 import AudioPlayer from "../shared/AudioPlayer";
 import Seperator from "../shared/Seperator";
 import DefinitionsView from "./DefinitionsView";
+import Footer from "../footer/Footer";
 
 interface Props {
   word: Word;
 }
 
 const WordView: FC<Props> = ({
-  word: { word: text, phonetic, phonetics, meanings },
+  word: { word: text, phonetic, phonetics, meanings, sourceUrls },
 }) => {
   const phoneticAudioURL = phonetics.find(
     (phonetic) => phonetic.audio.length > 0
@@ -31,19 +32,20 @@ const WordView: FC<Props> = ({
           </span>
         </div>
 
-        {/* TODO: for some reason the wrong sound is played */}
-        {/* When searching for a nonexisitnt word followed by an existent */}
-        {/* one, the audio works just fine! */}
+        {/* Phonetic */}
         {phoneticAudioURL && <AudioPlayer source={phoneticAudioURL} />}
-        {/*  */}
       </section>
 
+      {/* Meanings */}
       {meanings.map(({ partOfSpeech, synonyms, definitions }, idx) => (
         <Fragment key={idx}>
           <Seperator text={partOfSpeech} />
           <DefinitionsView definitions={definitions} synonyms={synonyms} />
         </Fragment>
       ))}
+
+      {/* Footer */}
+      <Footer source={sourceUrls[0]} />
     </>
   );
 };
