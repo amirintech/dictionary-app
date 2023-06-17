@@ -26,7 +26,9 @@ const Input: FC<Props> = ({
           error ? "ring-1 ring-red" : ""
         }`}
       >
-        <label htmlFor={id}>Search</label>
+        <label htmlFor={id} className="sr-only">
+          Search
+        </label>
         <input
           id={id}
           type={type}
