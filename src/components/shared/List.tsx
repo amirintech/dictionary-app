@@ -8,7 +8,7 @@ interface Props {
 const List: FC<Props> = ({ definitions }) => {
   return (
     <div>
-      <h3 className="mb-4 text-grey-600 md:mb-6 md:text-xl">Meaning</h3>
+      <h2 className="mb-4 text-grey-600 md:mb-6 md:text-xl">Meaning</h2>
 
       <ul className="m-0 flex flex-col gap-4 p-0">
         {definitions.map(({ definition, example }, idx) => (

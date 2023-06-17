@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react";
+import { ChangeEvent, FC, useId } from "react";
 import { GoSearch } from "react-icons/go";
 
 interface Props {
@@ -18,6 +18,7 @@ const Input: FC<Props> = ({
   onChange,
   onSearch,
 }) => {
+  const id = useId();
   return (
     <div className="md:text-xl">
       <div
@@ -25,7 +26,9 @@ const Input: FC<Props> = ({
           error ? "ring-1 ring-red" : ""
         }`}
       >
+        <label htmlFor={id}>Search</label>
         <input
+          id={id}
           type={type}
           value={value}
           placeholder={placeholder}

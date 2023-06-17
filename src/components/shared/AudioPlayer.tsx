@@ -31,6 +31,8 @@ const AudioPlayer: FC<Props> = ({ source }) => {
         <source src={source} type="audio/mpeg" />
       </audio>
 
+      <span className="sr-only">Play</span>
+
       <BsPlayFill className="h-5 w-5 text-violet duration-200 group-hover:text-white md:h-8 md:w-8" />
     </button>
   );

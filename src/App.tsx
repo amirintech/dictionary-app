@@ -50,11 +50,13 @@ const App = () => {
           />
         </div>
 
-        {/* No definition error view */}
-        {noDefinitionError && <WordNotFoundView />}
+        <main>
+          {/* No definition error view */}
+          {noDefinitionError && <WordNotFoundView />}
 
-        {/* Word view */}
-        {!noDefinitionError && <WordView word={word} />}
+          {/* Word view */}
+          {!noDefinitionError && <WordView word={word} />}
+        </main>
       </div>
     </div>
   );

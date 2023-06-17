@@ -14,7 +14,6 @@ const Switch: FC<Props> = ({ on = false, onClick }) => {
 
   return (
     <label
-      role="button"
       className={`inline-block h-5 w-10 rounded-full p-[3px] duration-200 before:block before:h-[14px] before:w-[14px] before:rounded-full before:bg-white before:duration-200 hover:bg-violet ${
         isOn
           ? "bg-violet before:translate-x-5"
