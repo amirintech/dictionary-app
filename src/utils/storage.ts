@@ -9,7 +9,7 @@ export const getPreferences = (): Preferences => {
   const preferences = localStorage.getItem("preferences");
   return preferences
     ? JSON.parse(preferences)
-    : { font: fonts[0], mode: "dark" };
+    : { font: fonts[1], mode: "light" };
 };
 
 export const setPreferences = (preferences: Preferences) => {
