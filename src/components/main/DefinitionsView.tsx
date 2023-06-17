@@ -15,7 +15,7 @@ const DefinitionsView: FC<Props> = ({ synonyms, definitions }) => {
       <List definitions={definitions} />
 
       {synonyms.length > 0 && (
-        <div className="mt-6 flex items-start gap-6 md:text-xl">
+        <div className="mt-10 flex items-start gap-6 md:text-xl">
           <h3 className="text-grey-600">Synonyms</h3>
           <p className="font-bold text-violet">{formattedSynonyms}</p>
         </div>
