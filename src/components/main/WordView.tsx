@@ -19,10 +19,10 @@ const WordView: FC<Props> = ({
 
   return (
     <>
-      <section className="mt-7 flex items-center justify-between md:mt-12">
+      <section className="mt-7 flex items-center justify-between md:mt-[52px]">
         <div>
           {/* word */}
-          <h1 className="mb-2 text-[32px] font-bold capitalize md:text-[64px]">
+          <h1 className="mb-2 text-[32px] font-bold capitalize leading-none md:text-[64px]">
             {text}
           </h1>
 
