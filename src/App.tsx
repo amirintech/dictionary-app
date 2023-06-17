@@ -40,6 +40,16 @@ const App = () => {
         {/* Header */}
         <Header />
 
+        {/* Search */}
+        <section className="mt-6 md:mt-[52px]">
+          <Input
+            value={searchQuery}
+            error={emptyInputError}
+            onSearch={handleSearch}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </section>
+
         {/* Main */}
         <main>
           {/* No definition error view */}
